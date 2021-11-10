@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Space
             android:layout_width="match_parent"
@@ -41,7 +42,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Space
             android:layout_width="match_parent"
@@ -69,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="ACCEDER" />
+
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

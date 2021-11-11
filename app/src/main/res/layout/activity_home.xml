@@ -47,19 +47,69 @@
             android:layout_width="match_parent"
             android:layout_height="8dp" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/EditTextCiudad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:ems="10"
+            android:hint="Ciudad"
+            android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/botonCerrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CERRAR SESIÓN" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/EditTextCP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Código Postal"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/botonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GUARDAR" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/botonRecuperar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RECUPERAR" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/botonEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ELIMINAR" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/botonCerrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="CERRAR SESIÓN" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

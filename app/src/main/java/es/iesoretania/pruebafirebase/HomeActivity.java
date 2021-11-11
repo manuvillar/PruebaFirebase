@@ -16,18 +16,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 
+import es.iesoretania.pruebafirebase.databinding.ActivityHomeBinding;
+
 public class HomeActivity extends AppCompatActivity {
-    TextView emailTextView, proveedorTextView;
-    Button botonCerrar;
+    private ActivityHomeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        emailTextView = findViewById(R.id.TextViewEmail);
-        proveedorTextView = findViewById(R.id.TextViewProveedor);
-        botonCerrar = findViewById(R.id.botonCerrar);
+        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         setTitle("Pantalla Home");
 
@@ -35,14 +33,35 @@ public class HomeActivity extends AppCompatActivity {
         String mail = datos.getString("email");
         String proveedor = datos.getString("proveedor");
 
-        emailTextView.setText(mail);
-        proveedorTextView.setText(proveedor);
+        binding.TextViewEmail.setText(mail);
+        binding.TextViewProveedor.setText(proveedor);
 
-        botonCerrar.setOnClickListener(new View.OnClickListener() {
+        binding.botonCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 onBackPressed();
+            }
+        });
+
+        binding.botonGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        binding.botonRecuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        binding.botonEliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
